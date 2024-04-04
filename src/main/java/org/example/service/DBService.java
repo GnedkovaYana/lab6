@@ -9,7 +9,6 @@ public class DBService {
     public DBService() {
         connection = getPostgressConnection();
     }
-
     public UserProfile getUser(String login) {
         try {
             return new UsersDAO(connection).get(login);
